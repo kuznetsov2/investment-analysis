@@ -8,7 +8,8 @@
 \begin{table}[]
 	\caption{My caption}
 	\label{my-label}
-	\begin{tabular}{|l|l|l|l|}
+	\setlength{\extrarowheight}{1mm}
+	\begin{tabularx}{\textwidth}{|p{3.85cm}|K{4cm}|K{4cm}|K{4cm}|}
 		\hline
 		\multicolumn{1}{|c|}{Показатель}                                   & \multicolumn{1}{c|}{Способ расчета}                                & \multicolumn{1}{c|}{Нормальное ограничение}             & \multicolumn{1}{c|}{Экономический смысл показателя}                                                                                                               \\ \hline
 		Коэффициент капитализации (плечо финансового рычага), $Y_1$        & $Y_1 = \dfrac{\text{Заёмный капитал}}{\text{Собственный капитал}}$ & Не выше 1,5                                             & Показывает, сколько организация привлекла заёмных средств на 1 руб. вложенных в активы собственных средств                                                        \\ \hline
@@ -19,7 +20,7 @@
 		&                                                                    &                                                         &                                                                                                                                                                   \\ \hline
 		&                                                                    &                                                         &                                                                                                                                                                   \\ \hline
 		&                                                                    &                                                         &                                                                                                                                                                   \\ \hline
-	\end{tabular}
+	\end{tabularx}
 \end{table}
 
 
