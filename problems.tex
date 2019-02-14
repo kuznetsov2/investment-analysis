@@ -41,6 +41,8 @@ $i$ --- количество премий за риск.
 
 \[ r = 7,75  + 4 + 5 = 16,75 \%\]
 
+Полученные на этапах расчёта показатели будем вносить в таблицу \ref{final}.
+
 1. Рассчитаем простую норму прибыли ($ROI$):
 
 Простую норму прибыли определим по формуле \cite[174]{sergeev}:
@@ -72,7 +74,28 @@ $i$ --- количество премий за риск.
 
 3. Рассчитаем простой срок окупаемости ($PP$):
 
-Целую часть периода окупаемости найдем из строки <<Сальдо накопленного денежного потока>> таблицы 
+Целую часть периода окупаемости найдем из таблицы \ref{nakopl}.
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[!h]
+	\label{nakopl}
+	\caption{Сальдо накопленного денежного потока}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{|l|l|l|l|l|l|l|l|}
+			\hline
+			Проект & IC, руб & 1   & 2   & 3   & 4   & 5   & Ликв. Ст-ть, руб \\ \hline
+			А      & 180     & 110 & 200 & 110 & 160 & 200 & 130              \\ \hline
+			В      & 200     & 200 & 140 & 150 & 150 & 250 & 150              \\ \hline
+			С      & 190     & 170 & 110 & 140 & 120 & 100 & 120              \\ \hline
+			D      & 170     & 150 & 110 & 110 & 170 & 170 & 100              \\ \hline
+			А      & -180    & -70 & 130 & 240 & 400 & 600 & 130              \\ \hline
+			В      & -200    & 0   & 140 & 290 & 440 & 690 & 150              \\ \hline
+			С      & -190    & -20 & 90  & 230 & 350 & 450 & 120              \\ \hline
+			D      & -170    & -20 & 90  & 200 & 370 & 540 & 100              \\ \hline
+		\end{tabular}%
+	}
+\end{table}
 
 Рассчитаем $PP$ \cite[109]{kasyanenko2}:
 
@@ -86,9 +109,12 @@ $i$ --- количество премий за риск.
 
 4. Рассчитаем дисконтированный срок окупаемости ($DPP$):
 
+Продисконтируем денежные потоки по ставке дисконта 16,75\%. Данные внесем в таблицу \ref{diskont}.
 % Please add the following required packages to your document preamble:
 % \usepackage{graphicx}
 \begin{table}[!h]
+	\label{diskont}
+	\caption{Дисконтированные денежные потоки}
 	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{|l|l|l|l|l|l|l|l|}
 			\hline
@@ -125,5 +151,20 @@ $i$ --- количество премий за риск.
 
 
 
-
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[]
+	\label{final}
+	\caption{Показатели эффективности инвестиционных проектов}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{|l|l|l|l|l|l|l|l|}
+			\hline
+			Проект & ROI  & ARR    & PP   & DPP & NPV & PI & IRR \\ \hline
+			А      & 0,87 & 100,6 & 1,35 &     &     &    &     \\ \hline
+			В      & 0,89 & 101,7 &  1    &     &     &    &     \\ \hline
+			С      & 0,67 & 82,6  &    1,18  &     &     &    &     \\ \hline
+			D      & 0,84 & 105,2 &  1,18    &     &     &    &     \\ \hline
+		\end{tabular}%
+	}
+\end{table}
 
